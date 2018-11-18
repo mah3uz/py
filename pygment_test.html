@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #49483e }
+body  { background: #272822; color: #f8f8f2 }
+body .c { color: #75715e } /* Comment */
+body .err { color: #960050; background-color: #1e0010 } /* Error */
+body .k { color: #66d9ef } /* Keyword */
+body .l { color: #ae81ff } /* Literal */
+body .n { color: #f8f8f2 } /* Name */
+body .o { color: #f92672 } /* Operator */
+body .p { color: #f8f8f2 } /* Punctuation */
+body .ch { color: #75715e } /* Comment.Hashbang */
+body .cm { color: #75715e } /* Comment.Multiline */
+body .cp { color: #75715e } /* Comment.Preproc */
+body .cpf { color: #75715e } /* Comment.PreprocFile */
+body .c1 { color: #75715e } /* Comment.Single */
+body .cs { color: #75715e } /* Comment.Special */
+body .gd { color: #f92672 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gi { color: #a6e22e } /* Generic.Inserted */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #75715e } /* Generic.Subheading */
+body .kc { color: #66d9ef } /* Keyword.Constant */
+body .kd { color: #66d9ef } /* Keyword.Declaration */
+body .kn { color: #f92672 } /* Keyword.Namespace */
+body .kp { color: #66d9ef } /* Keyword.Pseudo */
+body .kr { color: #66d9ef } /* Keyword.Reserved */
+body .kt { color: #66d9ef } /* Keyword.Type */
+body .ld { color: #e6db74 } /* Literal.Date */
+body .m { color: #ae81ff } /* Literal.Number */
+body .s { color: #e6db74 } /* Literal.String */
+body .na { color: #a6e22e } /* Name.Attribute */
+body .nb { color: #f8f8f2 } /* Name.Builtin */
+body .nc { color: #a6e22e } /* Name.Class */
+body .no { color: #66d9ef } /* Name.Constant */
+body .nd { color: #a6e22e } /* Name.Decorator */
+body .ni { color: #f8f8f2 } /* Name.Entity */
+body .ne { color: #a6e22e } /* Name.Exception */
+body .nf { color: #a6e22e } /* Name.Function */
+body .nl { color: #f8f8f2 } /* Name.Label */
+body .nn { color: #f8f8f2 } /* Name.Namespace */
+body .nx { color: #a6e22e } /* Name.Other */
+body .py { color: #f8f8f2 } /* Name.Property */
+body .nt { color: #f92672 } /* Name.Tag */
+body .nv { color: #f8f8f2 } /* Name.Variable */
+body .ow { color: #f92672 } /* Operator.Word */
+body .w { color: #f8f8f2 } /* Text.Whitespace */
+body .mb { color: #ae81ff } /* Literal.Number.Bin */
+body .mf { color: #ae81ff } /* Literal.Number.Float */
+body .mh { color: #ae81ff } /* Literal.Number.Hex */
+body .mi { color: #ae81ff } /* Literal.Number.Integer */
+body .mo { color: #ae81ff } /* Literal.Number.Oct */
+body .sa { color: #e6db74 } /* Literal.String.Affix */
+body .sb { color: #e6db74 } /* Literal.String.Backtick */
+body .sc { color: #e6db74 } /* Literal.String.Char */
+body .dl { color: #e6db74 } /* Literal.String.Delimiter */
+body .sd { color: #e6db74 } /* Literal.String.Doc */
+body .s2 { color: #e6db74 } /* Literal.String.Double */
+body .se { color: #ae81ff } /* Literal.String.Escape */
+body .sh { color: #e6db74 } /* Literal.String.Heredoc */
+body .si { color: #e6db74 } /* Literal.String.Interpol */
+body .sx { color: #e6db74 } /* Literal.String.Other */
+body .sr { color: #e6db74 } /* Literal.String.Regex */
+body .s1 { color: #e6db74 } /* Literal.String.Single */
+body .ss { color: #e6db74 } /* Literal.String.Symbol */
+body .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+body .fm { color: #a6e22e } /* Name.Function.Magic */
+body .vc { color: #f8f8f2 } /* Name.Variable.Class */
+body .vg { color: #f8f8f2 } /* Name.Variable.Global */
+body .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+body .vm { color: #f8f8f2 } /* Name.Variable.Magic */
+body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span><span class="p">,</span> <span class="n">namedtuple</span>
+
+
+<span class="c1"># we&#39;ll use infinity as a default distance to nodes.</span>
+<span class="n">inf</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+<span class="n">Edge</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Edge&#39;</span><span class="p">,</span> <span class="s1">&#39;start, end, cost&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">make_edge</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">Edge</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">cost</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Graph</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
+        <span class="c1"># let&#39;s check that the data is right</span>
+        <span class="n">wrong_edges</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">edges</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="n">wrong_edges</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Wrong edges data: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wrong_edges</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">edges</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_edge</span><span class="p">(</span><span class="o">*</span><span class="n">edge</span><span class="p">)</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">(</span>
+            <span class="nb">sum</span><span class="p">(</span>
+                <span class="p">([</span><span class="n">edge</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">edge</span><span class="o">.</span><span class="n">end</span><span class="p">]</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">),</span> <span class="p">[]</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_node_pairs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">both_ends</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">both_ends</span><span class="p">:</span>
+            <span class="n">node_pairs</span> <span class="o">=</span> <span class="p">[[</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">],</span> <span class="p">[</span><span class="n">n2</span><span class="p">,</span> <span class="n">n1</span><span class="p">]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_pairs</span> <span class="o">=</span> <span class="p">[[</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">node_pairs</span>
+
+    <span class="k">def</span> <span class="nf">remove_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">both_ends</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">node_pairs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_node_pairs</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">both_ends</span><span class="p">)</span>
+        <span class="n">edges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">[:]</span>
+        <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">[</span><span class="n">edge</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">edge</span><span class="o">.</span><span class="n">end</span><span class="p">]</span> <span class="ow">in</span> <span class="n">node_pairs</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">edge</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">both_ends</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">node_pairs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_node_pairs</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">both_ends</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">[</span><span class="n">edge</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">edge</span><span class="o">.</span><span class="n">end</span><span class="p">]</span> <span class="ow">in</span> <span class="n">node_pairs</span><span class="p">:</span>
+                <span class="k">return</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Edge {} {} already exists&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">n1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">n2</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="n">cost</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">both_ends</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Edge</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">n2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">n1</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="n">cost</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">neighbours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">neighbours</span> <span class="o">=</span> <span class="p">{</span><span class="n">vertex</span><span class="p">:</span> <span class="nb">set</span><span class="p">()</span> <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">edges</span><span class="p">:</span>
+            <span class="n">neighbours</span><span class="p">[</span><span class="n">edge</span><span class="o">.</span><span class="n">start</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">edge</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="n">edge</span><span class="o">.</span><span class="n">cost</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">neighbours</span>
+
+    <span class="k">def</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">source</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="s1">&#39;Such source node doesn</span><span class="se">\&#39;</span><span class="s1">t exist&#39;</span>
+        <span class="n">distances</span> <span class="o">=</span> <span class="p">{</span><span class="n">vertex</span><span class="p">:</span> <span class="n">inf</span> <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="p">}</span>
+        <span class="n">previous_vertices</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">vertex</span><span class="p">:</span> <span class="bp">None</span> <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span>
+        <span class="p">}</span>
+        <span class="n">distances</span><span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">vertices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="k">while</span> <span class="n">vertices</span><span class="p">:</span>
+            <span class="n">current_vertex</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span>
+                <span class="n">vertices</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">vertex</span><span class="p">:</span> <span class="n">distances</span><span class="p">[</span><span class="n">vertex</span><span class="p">])</span>
+            <span class="n">vertices</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">current_vertex</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">distances</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]</span> <span class="o">==</span> <span class="n">inf</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">for</span> <span class="n">neighbour</span><span class="p">,</span> <span class="n">cost</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">neighbours</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]:</span>
+                <span class="n">alternative_route</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span>
+                <span class="k">if</span> <span class="n">alternative_route</span> <span class="o">&lt;</span> <span class="n">distances</span><span class="p">[</span><span class="n">neighbour</span><span class="p">]:</span>
+                    <span class="n">distances</span><span class="p">[</span><span class="n">neighbour</span><span class="p">]</span> <span class="o">=</span> <span class="n">alternative_route</span>
+                    <span class="n">previous_vertices</span><span class="p">[</span><span class="n">neighbour</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_vertex</span>
+
+        <span class="n">path</span><span class="p">,</span> <span class="n">current_vertex</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(),</span> <span class="n">dest</span>
+        <span class="k">while</span> <span class="n">previous_vertices</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">path</span><span class="o">.</span><span class="n">appendleft</span><span class="p">(</span><span class="n">current_vertex</span><span class="p">)</span>
+            <span class="n">current_vertex</span> <span class="o">=</span> <span class="n">previous_vertices</span><span class="p">[</span><span class="n">current_vertex</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">path</span><span class="p">:</span>
+            <span class="n">path</span><span class="o">.</span><span class="n">appendleft</span><span class="p">(</span><span class="n">current_vertex</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">path</span>
+
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">dijkstra</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></body>
+</html>
